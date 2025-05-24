@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2rem;
+        padding: 1.5rem 2rem;
         font-size: 1rem;
         text-transform: uppercase;
       }
@@ -38,8 +38,8 @@
       .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0;
-        padding: 0 2rem 2rem;
+        gap: 2rem;
+        padding: 2rem;
       }
 
       .gallery-item {
@@ -47,28 +47,30 @@
         position: relative;
       }
 
+      .gallery-labels {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        color: #444;
+      }
+
       .gallery-item img {
         width: 100%;
         height: auto;
-        display: block;
-      }
-
-      .gallery-item h3 {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 0.8rem;
-        background: rgba(255, 255, 255, 0.7);
-        padding: 0.3rem 0.5rem;
-        border-radius: 4px;
-        text-transform: uppercase;
+        max-width: 300px;
+        border-radius: 8px;
       }
 
       model-viewer {
         width: 100%;
-        height: 500px;
+        max-width: 900px;
+        margin: 2rem auto;
+        height: 400px;
         background: #eee;
-        border-radius: 0;
+        border-radius: 10px;
+        display: block;
       }
 
       .button-container {
@@ -91,21 +93,32 @@
 
   <body>
     <header>
-      <div class="logo">TAYO</div>
+      <div class="logo">STILIS</div>
     </header>
 
     <div class="gallery">
       <div class="gallery-item">
-        <h3>NECK</h3>
+        <div class="gallery-labels">
+          <span>DARK WOOD</span>
+          <span>2025 EDITION</span>
+        </div>
         <img src="rendering_sesserl_1.jpg" alt="Rendering Sessel 1" />
       </div>
+
       <div class="gallery-item">
-        <h3>HAND</h3>
+        <div class="gallery-labels">
+          <span>OAK</span>
+          <span>NATURAL STYLE</span>
+        </div>
         <img src="rendering_sesserl_1.jpg" alt="Rendering Sessel 2" />
       </div>
+
       <div class="gallery-item">
-        <h3>BODY</h3>
-        <img src="rendering_sesserl_1.jpg" alt="Rendering Sessel 1" />
+        <div class="gallery-labels">
+          <span>BIRCH</span>
+          <span>LIGHT EDITION</span>
+        </div>
+        <img src="rendering_sesserl_1.jpg" alt="Rendering Sessel 3" />
       </div>
     </div>
 
