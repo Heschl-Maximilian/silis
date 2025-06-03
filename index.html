@@ -8,15 +8,26 @@
     </style>
   </head>
   <body>
-     <model-viewer
-          src="sesserl1.glb"
-          alt="Sesserl Modell 1"
-          ar
-          ar-modes="scene-viewer webxr quick-look"
-          auto-rotate
-          camera-controls
-          poster="rendering_sesserl_1.jpg"
-          shadow-intensity="1"
-        ></model-viewer>
+    <model-viewer
+      id="ar-viewer"
+      src="sesserl1.glb"
+      alt="Sesserl Modell 1"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      auto-rotate
+      camera-controls
+      poster="rendering_sesserl_1.jpg"
+      shadow-intensity="1"
+    ></model-viewer>
+
+    <script>
+      window.addEventListener('load', () => {
+        const modelViewer = document.getElementById('ar-viewer');
+        if (modelViewer.canActivateAR) {
+          modelViewer.activateAR();
+        }
+      });
+    </script>
   </body>
 </html>
+
